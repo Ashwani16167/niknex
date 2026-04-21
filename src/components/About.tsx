@@ -1,6 +1,6 @@
 'use client';
 
-import { Zap, Users, Shield, Headphones, TrendingUp } from 'lucide-react';
+import { Zap, Users, Shield, TrendingUp } from 'lucide-react';
 
 export default function About() {
   const features = [
@@ -35,7 +35,7 @@ export default function About() {
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             We are a trusted IT service provider committed to delivering excellence in every project. 
-            With years of experience, we've earned the trust of hundreds of satisfied customers.
+            With years of experience, we have earned the trust of hundreds of satisfied customers.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function About() {
         <div className="mt-16 bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 rounded-xl p-8">
           <p className="text-lg text-gray-300 text-center">
             <span className="text-accent font-bold">Founded with a vision</span> to provide reliable, affordable, and professional IT solutions. 
-            We're not just a service provider; we're your technology partner committed to your success.
+            We are not just a service provider; we are your technology partner committed to your success.
           </p>
         </div>
       </div>
