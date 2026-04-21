@@ -36,6 +36,8 @@ export default function Products() {
   return (
     <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
       <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Our <span className="text-gradient">Products</span>
@@ -45,6 +47,7 @@ export default function Products() {
           </p>
         </div>
 
+        {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((product, index) => (
             <div
@@ -59,6 +62,7 @@ export default function Products() {
                   <p className="text-xs text-gray-400 mt-1">{product.category}</p>
                 </div>
               </div>
+
               <button className="w-full bg-primary hover:bg-primary/80 text-white text-sm font-medium py-2 rounded transition mt-3">
                 Enquire
               </button>
@@ -66,8 +70,10 @@ export default function Products() {
           ))}
         </div>
 
+        {/* CTA */}
         <div className="text-center mt-12">
-          <p className="text-gray-300 mb-4">Can't find what you need?</p>
+          <p className="text-gray-300 mb-4">Can not find what you need?</p>
+
           <a
             href="#contact"
             className="inline-flex items-center space-x-2 bg-accent/20 hover:bg-accent/30 border border-accent/50 text-accent font-bold py-3 px-8 rounded-lg transition"
@@ -76,6 +82,7 @@ export default function Products() {
             <span>Request Custom Product</span>
           </a>
         </div>
+
       </div>
     </section>
   );
