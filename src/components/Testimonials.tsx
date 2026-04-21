@@ -39,6 +39,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
       <div className="max-w-7xl mx-auto">
+
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             What Our <span className="text-gradient">Customers Say</span>
@@ -63,7 +64,11 @@ export default function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="text-gray-300 mb-4 italic">"{testimonial.comment}"</p>
+
+              <p className="text-gray-300 mb-4 italic">
+                &quot;{testimonial.comment}&quot;
+              </p>
+
               <div>
                 <p className="font-bold text-white">{testimonial.name}</p>
                 <p className="text-sm text-accent">{testimonial.role}</p>
@@ -71,6 +76,7 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
