@@ -19,7 +19,7 @@ export default function Contact() {
     e.preventDefault();
 
     const message = `Hi NIKNEX, I am ${formData.name}. ${formData.message}. My contact: ${formData.phone}`;
-    const whatsappUrl = `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/917318196299?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappUrl, '_blank');
 
@@ -56,8 +56,8 @@ export default function Contact() {
                   <p className="text-sm text-gray-400">Mon-Sat, 9AM-6PM</p>
                 </div>
               </div>
-              <a href="tel:+91XXXXXXXXXX" className="text-primary font-bold hover:text-accent transition">
-                +91 XXXXXXXXXX
+              <a href="tel:+917318196299" className="text-primary font-bold hover:text-accent transition">
+                +91 7318196299
               </a>
             </div>
 
@@ -73,7 +73,7 @@ export default function Contact() {
                 </div>
               </div>
               <a
-                href="https://wa.me/91XXXXXXXXXX"
+                href="https://wa.me/917318196299"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-green-400 font-bold hover:text-green-300 transition"
