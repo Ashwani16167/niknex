@@ -1,37 +1,33 @@
 'use client';
 
+import Image from 'next/image';
 import { MessageSquare } from 'lucide-react';
 
 export default function Products() {
   const products = [
-    { name: 'CCTV Camera (Dome)', category: 'Security' },
-    { name: 'CCTV Camera (Bullet)', category: 'Security' },
-    { name: 'IP Camera', category: 'Security' },
-    { name: 'DVR System', category: 'Security' },
-    { name: 'NVR System', category: 'Security' },
-    { name: 'Surveillance HDD', category: 'Storage' },
-    { name: 'SMPS/Power Supply', category: 'Power' },
-    { name: 'POE Switch', category: 'Networking' },
-    { name: 'WiFi Router', category: 'Networking' },
-    { name: 'Network Switch', category: 'Networking' },
-    { name: 'LAN Cable (Cat5e)', category: 'Cabling' },
-    { name: 'LAN Cable (Cat6)', category: 'Cabling' },
-    { name: 'Coaxial Cable', category: 'Cabling' },
-    { name: 'BNC Connector', category: 'Cabling' },
-    { name: 'RJ45 Connector', category: 'Cabling' },
-    { name: 'HDMI Cable', category: 'Cabling' },
-    { name: 'CCTV Monitor', category: 'Display' },
-    { name: 'Inkjet Printer', category: 'Peripherals' },
-    { name: 'Laser Printer', category: 'Peripherals' },
-    { name: 'RAM', category: 'Computer Parts' },
-    { name: 'SSD', category: 'Computer Parts' },
-    { name: 'HDD', category: 'Computer Parts' },
-    { name: 'Motherboard', category: 'Computer Parts' },
-    { name: 'Keyboard', category: 'Accessories' },
-    { name: 'Mouse', category: 'Accessories' },
-    { name: 'Monitor', category: 'Accessories' },
-    { name: 'Webcam', category: 'Accessories' },
+    { name: 'Laptop', category: 'Computer', image: '/products/LAPTOP.jpeg' },
+    { name: 'Processor', category: 'Computer Parts', image: '/products/PROCESSOR.jpeg' },
+    { name: 'RAM', category: 'Computer Parts', image: '/products/RAM.jpeg' },
+    { name: 'Hard Disk', category: 'Storage', image: '/products/HARD DISK.jpeg' },
+    { name: 'SSD', category: 'Storage', image: '/products/SSD.jpeg' },
+    { name: 'Power Supply (SMPS)', category: 'Power', image: '/products/Power Supply (SMPS).jpeg' },
+    { name: 'Printer', category: 'Peripherals', image: '/products/Printer.jpeg' },
+    { name: 'Keyboard + Mouse Combo', category: 'Accessories', image: '/products/Keyboard + Mouse Combo.jpeg' },
+    { name: 'Mouse', category: 'Accessories', image: '/products/mouse.jpeg' },
+    { name: 'Ethernet Cable', category: 'Cabling', image: '/products/Ethernet Cable.jpeg' },
+    { name: 'VGA Cable', category: 'Cabling', image: '/products/VGA Cable.jpeg' },
+    { name: 'USB Hub', category: 'Accessories', image: '/products/USB Hub.jpeg' },
+    { name: 'Pen Drive', category: 'Storage', image: '/products/PEN DRIVE.jpeg' },
+    { name: 'Adaptor', category: 'Power', image: '/products/ADAPTOR.jpeg' },
+    { name: 'Windows', category: 'Software', image: '/products/WINDOWS.jpeg' },
+    { name: 'MS Office', category: 'Software', image: '/products/MS OFFICE.jpeg' },
   ];
+
+  const handleEnquire = (productName: string) => {
+    const message = `Hi NIKNEX, I am interested in ${productName}. Can you please provide more details and pricing?`;
+    const whatsappUrl = `https://wa.me/917318196299?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   return (
     <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
@@ -52,20 +48,38 @@ export default function Products() {
           {products.map((product, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-lg p-4 hover:border-accent/50 transition transform hover:scale-105 cursor-pointer"
+              className="group bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-lg overflow-hidden hover:border-accent/50 transition transform hover:scale-105 cursor-pointer"
             >
-              <div className="flex items-start justify-between mb-3">
-                <div>
-                  <h3 className="font-bold text-white group-hover:text-accent transition">
-                    {product.name}
-                  </h3>
-                  <p className="text-xs text-gray-400 mt-1">{product.category}</p>
-                </div>
+              {/* Product Image */}
+              <div className="relative w-full h-48 bg-secondary/50 overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover group-hover:scale-110 transition duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  priority={false}
+                />
               </div>
 
-              <button className="w-full bg-primary hover:bg-primary/80 text-white text-sm font-medium py-2 rounded transition mt-3">
-                Enquire
-              </button>
+              {/* Product Info */}
+              <div className="p-4">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="font-bold text-white group-hover:text-accent transition">
+                      {product.name}
+                    </h3>
+                    <p className="text-xs text-gray-400 mt-1">{product.category}</p>
+                  </div>
+                </div>
+
+                <button 
+                  onClick={() => handleEnquire(product.name)}
+                  className="w-full bg-primary hover:bg-primary/80 text-white text-sm font-medium py-2 rounded transition mt-3"
+                >
+                  Enquire
+                </button>
+              </div>
             </div>
           ))}
         </div>

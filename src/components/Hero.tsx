@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
+import { Phone, MessageCircle, ArrowRight, MapPin } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -38,6 +38,15 @@ export default function Hero() {
               >
                 <span>Get Quote</span>
                 <ArrowRight size={20} />
+              </a>
+              <a
+                href="https://www.google.com/maps/place/Niknex+IT+Solutions/@25.2790195,82.9971307,17z/data=!3m1!4b1!4m6!3m5!1s0x398e3165fed12a4d:0x48ba2ff47908c935!8m2!3d25.2790195!4d82.9971307!16s%2Fg%2F11z2d43zcy!18m1!1e1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center space-x-2 border-2 border-green-500 hover:bg-green-500/10 text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105"
+              >
+                <MapPin size={20} />
+                <span>Get Directions</span>
               </a>
             </div>
           </div>

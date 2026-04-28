@@ -93,10 +93,15 @@ export default function Contact() {
                   <p className="text-sm text-gray-400">Office Location</p>
                 </div>
               </div>
-              <p className="text-gray-300">
-                Your Shop Address Here<br />
+              <a
+                href="https://www.google.com/maps/place/Niknex+IT+Solutions/@25.2790195,82.9971307,17z/data=!3m1!4b1!4m6!3m5!1s0x398e3165fed12a4d:0x48ba2ff47908c935!8m2!3d25.2790195!4d82.9971307!16s%2Fg%2F11z2d43zcy!18m1!1e1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-bold hover:text-accent transition"
+              >
+                Niknex IT Solutions<br />
                 Varanasi, Uttar Pradesh
-              </p>
+              </a>
             </div>
 
           </div>
